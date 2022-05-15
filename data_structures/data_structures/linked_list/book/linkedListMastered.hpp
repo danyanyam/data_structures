@@ -9,6 +9,7 @@
 #define linkedListMastered_hpp
 
 #include <stdio.h>
+#include <iostream>
 
 template <class Type> struct nodeType
 {
