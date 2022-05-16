@@ -1,14 +1,14 @@
 //
-//  main.cpp
-//  data_structures
+//  doubleLinkedList.cpp
+//  linked_list
 //
-//  Created by Daniil Buchko on 14.05.2022.
+//  Created by Daniil Buchko on 16.05.2022.
 //
 
+#include "circularDoubleLinkedList.hpp"
 #include <iostream>
-#include "circularDoubleLinkedList/circularDoubleLinkedList.hpp"
 
-int main(int argc, const char * argv[]) {
+int Main(int argc, const char * argv[]) {
     
     doubleLinkedList<int> list;
     
