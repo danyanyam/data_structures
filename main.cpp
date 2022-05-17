@@ -1,13 +1,13 @@
-// #include "list/linkedList/linkedList.hpp"
-#include "list/circularDoubleLinkedList/circularDoubleLinkedList.hpp"
-#include <iostream>
+#include "list/linkedList/linkedList.hpp"
+// #include "list/circularDoubleLinkedList/circularDoubleLinkedList.hpp"
+// #include <iostream>
+// #include "stack/stackType.hpp"
 
 int main(int argc, char const *argv[])
 {
-    doubleLinkedList<int> x;
-    x.insertLast(123);
-    x.insertLast(123);
-    std::cout << x;
-
+    linkedList y;
+    // stackType<int> x;
+    // stackType<int> x = stackType<int>(10);
+    // x.push(10);
     return 0;
 }

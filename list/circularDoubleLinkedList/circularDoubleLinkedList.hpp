@@ -11,28 +11,27 @@
 #include <stdio.h>
 #include <iostream>
 
-
 template <class Type>
-struct Node {
+struct Node
+{
     Type data;
-    Node* prev;
-    Node* next;
+    Node *prev;
+    Node *next;
 
     // https://adaickalavan.github.io/cpp/template-operator-overload/#gsc.tab=0
-    template<class T>  // hackaround operator<< overloading
-    friend std::ostream& operator<<(std::ostream& stream, const Node<T>& node);
+    template <class T> // hackaround operator<< overloading
+    friend std::ostream &operator<<(std::ostream &stream, const Node<T> &node);
 };
 
-
-
 template <class Type>
-class doubleLinkedList {
+class doubleLinkedList
+{
 public:
-    const doubleLinkedList<Type>& operator=(const doubleLinkedList<Type>&);
+    const doubleLinkedList<Type> &operator=(const doubleLinkedList<Type> &);
     // because pointers should point to new memory adresses
     // after copying data
 
-    doubleLinkedList<Type>(const doubleLinkedList<Type>&);
+    doubleLinkedList<Type>(const doubleLinkedList<Type> &);
     // copy constructor
 
     doubleLinkedList<Type>();
@@ -63,16 +62,14 @@ public:
     // checks if there are elements in the list
 
     // https://adaickalavan.github.io/cpp/template-operator-overload/#gsc.tab=0
-    template<class T>  // hackaround operator<< overloading
-    friend std::ostream& operator<<(std::ostream& stream, const doubleLinkedList<T>& linkedList);
+    template <class T> // hackaround operator<< overloading
+    friend std::ostream &operator<<(std::ostream &stream, const doubleLinkedList<T> &linkedList);
 
 private:
-    int count;               // amount of elements in the list
-    Node<Type>* head;        // pointer to the beginning of the list
-    Node<Type>* tail;        // pointer to the end of the list
-    void copyList(const doubleLinkedList&); // copy operator
+    int count;                               // amount of elements in the list
+    Node<Type> *head;                        // pointer to the beginning of the list
+    Node<Type> *tail;                        // pointer to the end of the list
+    void copyList(const doubleLinkedList &); // copy operator
 };
-
-
 
 #endif /* doubleLinkedList_hpp */

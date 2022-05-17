@@ -7,19 +7,20 @@
 
 #ifndef linkedList_hpp1
 #define linkedList_hpp1
+
 #include <stdio.h>
 
-struct Node {
+struct Node
+{
 public:
-    Node(int newData=0);
+    Node(int newData = 0);
     int data;
-    Node* next;
+    Node *next;
     // pointer to next node in linked list
-
 };
 
-
-class linkedList {
+class linkedList
+{
 public:
     void append(int value);
     // creates new node with value and inserts it
@@ -29,13 +30,13 @@ public:
     // creates new node with value and inserts it
     // at beginning of the linked list O(1)
 
-    void insertAfter(Node*& before, int newValue);
+    void insertAfter(Node *&before, int newValue);
     // creates new node after provided node
     // with newValue O(1)
 
     void remove(size_t index);
 
-    Node* get(size_t index);
+    Node *get(size_t index);
     // returns pointer to node at index O(n)
 
     void print();
@@ -48,14 +49,12 @@ public:
     // removes all nodes from list
 
 private:
-    Node* lastNode();
+    Node *lastNode();
     // returns pointer to the last Node
     // in list O(n)
 
-    Node* head;
+    Node *head;
     int size;
 };
-
-
 
 #endif /* linkedList_hpp */
